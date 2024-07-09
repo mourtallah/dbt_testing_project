@@ -1,0 +1,28 @@
+
+version: 2
+
+sources:
+  - name: test_table_sources
+    schema: dbt_testing
+    tables: 
+      - name: table1
+      - name: table2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
