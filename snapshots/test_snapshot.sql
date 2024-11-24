@@ -7,7 +7,6 @@
           target_schema='test_snapshot',
         )
     }}
-    -- Pro-Tip: Use sources in snapshots!
-    -- select * from {{ source('test_table_sources', 'table1') }}
-    select * from {{ ref('stg_table_1') }}
+    select * from {{ source('test_table_sources', 'bikeshare_trips') }}
+    
 {% endsnapshot %}
