@@ -1,9 +1,9 @@
 {% snapshot orders_snapshot %}
     {{
         config(
-          unique_key='id',
+          unique_key='trip_id',
           strategy='timestamp',
-          updated_at='timestamp',
+          updated_at='start_time',
           target_schema='test_snapshot',
         )
     }}
